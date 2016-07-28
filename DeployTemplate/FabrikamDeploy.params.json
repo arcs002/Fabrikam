@@ -1,0 +1,45 @@
+{
+  "storageAccountName": {
+    "value": "fabrikamcs1"
+  },
+  "dnslbName": {
+    "value": "fabrikamcs1"
+  },
+  "vmNamePrefix": {
+    "value": "Fabmktg"
+  },
+  "nvmNamePrefix": {
+    "value": "Test"
+  },  
+  "lbName": {
+    "value": "fabrikamcs1"
+  },    
+   "imagePublisher": {
+    "value": "MicrosoftSQLServer"
+  },
+   "imageOffer": {
+    "value": "SQL2014SP1-WS2012R2"
+  },  
+   "imageSKU": {
+    "value": "Standard"
+  },  
+     "imagePublisher2": {
+    "value": "MicrosoftSQLServer"
+  },
+   "imageOffer2": {
+    "value": "SQL2014SP1-WS2012R2"
+  },  
+   "imageSKU2": {
+    "value": "Standard"
+  },  
+    "vmSize": {
+    "value": "Standard_A4"
+  },
+    "adminUsername": {
+    "value": "vmuser"
+  },
+  "adminPassword": {
+    "value": "Password~1"
+  }
+}
+
