@@ -30,8 +30,9 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         public void SetupTest()
         {
             //baseURL = this.TestContext.Properties["webAppUrl"].ToString();
-            baseURL = "http://localhost/FabrikamFiber";
-            baseURL = "http://dtcvdapp-01:9090";
+            //baseURL = "http://localhost/FabrikamFiber";
+            //baseURL = "http://dtcvdapp-01:9090";
+            baseURL = "http://vm06-webapp1:8080";
 
             verificationErrors = new StringBuilder();
         }
