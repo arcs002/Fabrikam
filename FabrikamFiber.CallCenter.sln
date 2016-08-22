@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web", "FabrikamFiber.Web\FabrikamFiber.Web.csproj", "{456D6BF0-21B0-4995-9D77-76FA13AD95DA}"
 EndProject
@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web.Tests", "
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FabrikamDB", "FabrikamDB\FabrikamDB.sqlproj", "{C4FBCD16-2272-4DD2-8E10-7949A6F24C0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.WebAndLoadTest", "FabrikamFiber.WebAndLoadTest\FabrikamFiber.WebAndLoadTest.csproj", "{2D4A36D5-9E98-4C1E-A860-D4B65D948F9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{C4FBCD16-2272-4DD2-8E10-7949A6F24C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4FBCD16-2272-4DD2-8E10-7949A6F24C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4FBCD16-2272-4DD2-8E10-7949A6F24C0E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2D4A36D5-9E98-4C1E-A860-D4B65D948F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4A36D5-9E98-4C1E-A860-D4B65D948F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4A36D5-9E98-4C1E-A860-D4B65D948F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4A36D5-9E98-4C1E-A860-D4B65D948F9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,5 +90,6 @@ Global
 		{762CCF2C-2DF5-4BE7-B2D1-E812A700F754} = {DF8AE614-8E4D-4BDA-9879-7331588005B1}
 		{AF7F18E7-E7D0-4250-A6E2-8A2D900E22DD} = {DF8AE614-8E4D-4BDA-9879-7331588005B1}
 		{2FE8E250-4218-4B31-AB23-D9B91ABD842B} = {DF8AE614-8E4D-4BDA-9879-7331588005B1}
+		{2D4A36D5-9E98-4C1E-A860-D4B65D948F9E} = {DF8AE614-8E4D-4BDA-9879-7331588005B1}
 	EndGlobalSection
 EndGlobal
