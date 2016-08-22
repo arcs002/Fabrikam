@@ -27,6 +27,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Projects", "Test Projects", "{DF8AE614-8E4D-4BDA-9879-7331588005B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{68013E5E-5CF7-4CE1-B321-EE330FB455FA}"
+	ProjectSection(SolutionItems) = preProject
+		DataCollector-Level2.testsettings = DataCollector-Level2.testsettings
+		RemoteController.testsettings = RemoteController.testsettings
+		TestSettings.testsettings = TestSettings.testsettings
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Definitions", "Service Definitions", "{762CCF2C-2DF5-4BE7-B2D1-E812A700F754}"
 EndProject
@@ -34,6 +39,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		CI-CodeCoverage.RunSettings = CI-CodeCoverage.RunSettings
 		DataCollector-Level2.testsettings = DataCollector-Level2.testsettings
+		RemoteController.testsettings = RemoteController.testsettings
 		runsettings.runsettings = runsettings.runsettings
 		TestSettings.testsettings = TestSettings.testsettings
 		WeatherWSDL Test Steps.txt = WeatherWSDL Test Steps.txt
