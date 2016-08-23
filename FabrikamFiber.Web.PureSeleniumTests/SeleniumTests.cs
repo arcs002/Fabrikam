@@ -141,6 +141,10 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         private void Selenium_CreateNewCustomerRecord()
         {
+
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+            driver.Manage().Window.Maximize();
+
             driver.Navigate().GoToUrl(baseURL);
 
             driver.FindElement(By.CssSelector("a[href*='/Customers']")).Click();
