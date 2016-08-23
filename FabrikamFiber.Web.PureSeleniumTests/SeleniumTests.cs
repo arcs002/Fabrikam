@@ -14,6 +14,7 @@ using OpenQA.Selenium.Remote;
 namespace FabrikamFiber.Web.PureSeleniumTests
 {
     [TestClass]
+    [DeploymentItem("chromedriver.exe")]
     public class SeleniumTests
     {
         //private IWebDriver driver;
