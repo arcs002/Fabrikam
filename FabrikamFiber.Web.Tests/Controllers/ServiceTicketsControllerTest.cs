@@ -84,6 +84,7 @@
             controller.AssignSchedule(1, 101, 0);
 
             // Assert
+
             Assert.AreEqual(101, ticket.AssignedToID);
             mockScheduleItemRepo.Verify();
             mockServiceTicketRepo.Verify();
