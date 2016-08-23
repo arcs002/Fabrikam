@@ -14,7 +14,6 @@ using OpenQA.Selenium.Remote;
 namespace FabrikamFiber.Web.PureSeleniumTests
 {
     [TestClass]
-    [DeploymentItem("chromedriver.exe")]
     public class SeleniumTests
     {
         //private IWebDriver driver;
@@ -64,19 +63,19 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             Selenium_CreateNewCustomerRecord();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Chrome")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Chrome")]
         public void Selenium_CreateNewCustomerRecordChrome()
         {
             this.driver = new ChromeDriver();
             Selenium_CreateNewCustomerRecord();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [Ignore]
-        [TestCategory("InternetExplorer")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[Ignore]
+        //[TestCategory("InternetExplorer")]
         public void Selenium_CreateNewCustomerRecordIE()
         {
             this.driver = new InternetExplorerDriver();
@@ -92,19 +91,19 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             Selenium_VerifyDashboardPage();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Chrome")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Chrome")]
         public void Selenium_VerifyDashboardPageChrome()
         {
             this.driver = new ChromeDriver();
             Selenium_VerifyDashboardPage();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [Ignore]
-        [TestCategory("InternetExplorer")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[Ignore]
+        //[TestCategory("InternetExplorer")]
         public void Selenium_VerifyDashboardPageIE()
         {
             this.driver = new InternetExplorerDriver();
@@ -120,19 +119,19 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             Selenium_VerifyDashboardPage_NavigatesToReport();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Chrome")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Chrome")]
         public void Selenium_VerifyDashboardPage_NavigatesToReportChrome()
         {
             this.driver = new ChromeDriver();
             Selenium_VerifyDashboardPage_NavigatesToReport();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [Ignore]
-        [TestCategory("InternetExplorer")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[Ignore]
+        //[TestCategory("InternetExplorer")]
         public void Selenium_VerifyDashboardPage_NavigatesToReportIE()
         {
             this.driver = new InternetExplorerDriver();
