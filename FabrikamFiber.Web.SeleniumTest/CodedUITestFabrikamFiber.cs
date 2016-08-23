@@ -18,7 +18,7 @@ namespace FabrikamFiber.Web.SeleniumTest
     /// <summary>
     /// Summary description for CodedUITest1
     /// </summary>
-    [CodedUITest]
+    [TestClass]
     [DeploymentItem("chromedriver.exe")]
     public class CodedUITestFabrikamFiber
     {
