@@ -11,6 +11,7 @@ using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
 
 namespace FabrikamFiber.Web.SeleniumTest
 {
@@ -66,6 +67,46 @@ namespace FabrikamFiber.Web.SeleniumTest
             driver.Quit();
 
         }
+
+        [TestMethod]
+        public void FirefoxCreateCustomer()
+        {
+            // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
+
+            driver = new FirefoxDriver();
+            baseURL = "http://vm06-webapp1:8080";
+            driver.Navigate().GoToUrl(baseURL);
+            driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+
+            driver.FindElement(By.LinkText("Customers")).Click();
+
+            driver.FindElement(By.LinkText("Create New")).Click();
+
+            driver.FindElement(By.Id("FirstName")).Clear();
+            driver.FindElement(By.Id("FirstName")).SendKeys("Mary");
+
+            driver.FindElement(By.Id("LastName")).Clear();
+            driver.FindElement(By.Id("LastName")).SendKeys("Poppins");
+
+            driver.FindElement(By.Id("Address_Street")).Clear();
+            driver.FindElement(By.Id("Address_Street")).SendKeys("1234 Disneyland");
+
+            driver.FindElement(By.Id("Address_City")).Clear();
+            driver.FindElement(By.Id("Address_City")).SendKeys("Disney");
+
+            driver.FindElement(By.Id("Address_State")).Clear();
+            driver.FindElement(By.Id("Address_State")).SendKeys("LA");
+
+            driver.FindElement(By.Id("Address_Zip")).Clear();
+            driver.FindElement(By.Id("Address_Zip")).SendKeys("12345");
+
+            driver.FindElement(By.CssSelector("input.glossyBox")).Click();
+
+            driver.Quit();
+
+        }
+
 
         #region Additional test attributes
 
