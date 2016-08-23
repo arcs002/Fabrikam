@@ -67,6 +67,7 @@
             this.SetupController();
 
             // Arrange
+
             var scheduleItems = new List<ScheduleItem>();
             scheduleItems.Add(new ScheduleItem { ServiceTicketID = 1 });
             //mockScheduleItemRepo.SetReturnValue("get_All", scheduleItems.AsQueryable<ScheduleItem>());
@@ -79,6 +80,7 @@
             mockServiceTicketRepo.ExpectAndReturn("Save", null);
 
             // Act
+
             controller.AssignSchedule(1, 101, 0);
 
             // Assert
