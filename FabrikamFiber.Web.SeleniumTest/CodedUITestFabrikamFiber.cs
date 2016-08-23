@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
-using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
@@ -17,7 +9,7 @@ namespace FabrikamFiber.Web.SeleniumTest
     /// <summary>
     /// Summary description for CodedUITest1
     /// </summary>
-    [CodedUITest]
+    [TestClass]
     public class CodedUITestFabrikamFiber
     {
         private String baseURL;
