@@ -46,6 +46,11 @@ namespace FabrikamFiber.Web.Controllers
             return View();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="customer"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Create(Customer customer)
         {
