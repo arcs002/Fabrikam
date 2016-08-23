@@ -9,13 +9,15 @@ using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Assert = NUnit.Framework.Assert;
 using TestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
+using OpenQA.Selenium.Remote;
 
 namespace FabrikamFiber.Web.PureSeleniumTests
 {
     [TestClass]
     public class SeleniumTests
     {
-        private IWebDriver driver;
+        //private IWebDriver driver;
+        private RemoteWebDriver driver;
         private StringBuilder verificationErrors;
         private string baseURL;
         private bool acceptNextAlert = true;
