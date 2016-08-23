@@ -61,7 +61,7 @@
             controller.ViewBag.StartTime = 0;
         }
 
-        [Xunit.Fact]
+        //[Xunit.Fact]
         public void ScheduleActionCorrectlyUpdatesRepositories()
         {
             this.SetupController();
