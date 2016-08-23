@@ -55,84 +55,84 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             Assert.AreEqual("", verificationErrors.ToString());
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Firefox")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Firefox")]
         public void Selenium_CreateNewCustomerRecordFireFox()
         {
             this.driver = new FirefoxDriver();
             Selenium_CreateNewCustomerRecord();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Chrome")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Chrome")]
         public void Selenium_CreateNewCustomerRecordChrome()
         {
             this.driver = new ChromeDriver();
             Selenium_CreateNewCustomerRecord();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [Ignore]
-        [TestCategory("InternetExplorer")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[Ignore]
+        //[TestCategory("InternetExplorer")]
         public void Selenium_CreateNewCustomerRecordIE()
         {
             this.driver = new InternetExplorerDriver();
             Selenium_CreateNewCustomerRecord();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Firefox")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Firefox")]
         public void Selenium_VerifyDashboardPageFireFox()
         {
             this.driver = new FirefoxDriver();
             Selenium_VerifyDashboardPage();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Chrome")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Chrome")]
         public void Selenium_VerifyDashboardPageChrome()
         {
             this.driver = new ChromeDriver();
             Selenium_VerifyDashboardPage();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [Ignore]
-        [TestCategory("InternetExplorer")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[Ignore]
+        //[TestCategory("InternetExplorer")]
         public void Selenium_VerifyDashboardPageIE()
         {
             this.driver = new InternetExplorerDriver();
             Selenium_VerifyDashboardPage();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Firefox")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Firefox")]
         public void Selenium_VerifyDashboardPage_NavigatesToReportFireFox()
         {
             this.driver = new FirefoxDriver();
             Selenium_VerifyDashboardPage_NavigatesToReport();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Chrome")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Chrome")]
         public void Selenium_VerifyDashboardPage_NavigatesToReportChrome()
         {
             this.driver = new ChromeDriver();
             Selenium_VerifyDashboardPage_NavigatesToReport();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [Ignore]
-        [TestCategory("InternetExplorer")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[Ignore]
+        //[TestCategory("InternetExplorer")]
         public void Selenium_VerifyDashboardPage_NavigatesToReportIE()
         {
             this.driver = new InternetExplorerDriver();
