@@ -110,9 +110,9 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             Selenium_VerifyDashboardPage();
         }
 
-        [TestMethod]
-        [Priority(0)]
-        [TestCategory("Firefox")]
+        //[TestMethod]
+        //[Priority(0)]
+        //[TestCategory("Firefox")]
         public void Selenium_VerifyDashboardPage_NavigatesToReportFireFox()
         {
             this.driver = new FirefoxDriver();
