@@ -9,11 +9,19 @@ namespace FabrikamFiber.Web.Controllers
     {
         private readonly ICustomerRepository customerRepository;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="customerRepository"></param>
         public CustomersController(ICustomerRepository customerRepository)
         {
             this.customerRepository = customerRepository;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ViewResult Index()
         {
             return View(this.customerRepository.All);
