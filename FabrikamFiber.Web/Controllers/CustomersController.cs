@@ -37,6 +37,10 @@ namespace FabrikamFiber.Web.Controllers
             return View(this.customerRepository.Find(id));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Create()
         {
             return View();
