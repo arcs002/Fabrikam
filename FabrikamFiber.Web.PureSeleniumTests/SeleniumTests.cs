@@ -139,20 +139,31 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         private void Selenium_CreateNewCustomerRecord()
         {
             driver.Navigate().GoToUrl(baseURL);
-            driver.FindElement(By.LinkText("Customers")).Click();
-            driver.FindElement(By.LinkText("Create New")).Click();
+
+            driver.FindElement(By.CssSelector("a[href*='/Customers']")).Click();
+            //driver.FindElement(By.LinkText("Customers")).Click();
+
+            driver.FindElement(By.CssSelector("a[href*='/Customers/Create']")).Click();
+            //driver.FindElement(By.LinkText("Create New")).Click();
+
             driver.FindElement(By.Id("FirstName")).Clear();
             driver.FindElement(By.Id("FirstName")).SendKeys("Mary");
+
             driver.FindElement(By.Id("LastName")).Clear();
             driver.FindElement(By.Id("LastName")).SendKeys("Poppins");
+
             driver.FindElement(By.Id("Address_Street")).Clear();
             driver.FindElement(By.Id("Address_Street")).SendKeys("1234 Disneyland");
+
             driver.FindElement(By.Id("Address_City")).Clear();
             driver.FindElement(By.Id("Address_City")).SendKeys("Disney");
+
             driver.FindElement(By.Id("Address_State")).Clear();
             driver.FindElement(By.Id("Address_State")).SendKeys("LA");
+
             driver.FindElement(By.Id("Address_Zip")).Clear();
             driver.FindElement(By.Id("Address_Zip")).SendKeys("12345");
+
             driver.FindElement(By.CssSelector("input.glossyBox")).Click();
         }
 
