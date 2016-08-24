@@ -5,6 +5,9 @@
     using FabrikamFiber.DAL.Data;
     using FabrikamFiber.Web.ViewModels;
 
+    /// <summary>
+    /// teste
+    /// </summary>
     public class HomeController : Controller
     {
         private readonly IServiceTicketRepository serviceTickets;
