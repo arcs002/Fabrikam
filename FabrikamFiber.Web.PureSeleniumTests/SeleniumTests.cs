@@ -76,10 +76,10 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestMethod]
         [Priority(0)]
         [TestCategory("Firefox")]
-        public void Selenium_VerifyDashboardPage_NavigatesToReportFireFox()
+        public void Selenium_VerifyTicketsPageFireFox()
         {
             this.driver = new FirefoxDriver();
-            Selenium_VerifyDashboardPage_NavigatesToReport();
+            Selenium_VerifyTicketsPage();
         }
 
         #endregion
@@ -106,10 +106,10 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestMethod]
         [Priority(0)]
         [TestCategory("Chrome")]
-        public void Selenium_VerifyDashboardPage_NavigatesToReportChrome()
+        public void Selenium_VerifyTicketsPageChrome()
         {
             this.driver = new ChromeDriver();
-            Selenium_VerifyDashboardPage_NavigatesToReport();
+            Selenium_VerifyTicketsPage();
         }
 
         #endregion
@@ -140,10 +140,10 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [Priority(0)]
         [Ignore]
         [TestCategory("InternetExplorer")]
-        public void Selenium_VerifyDashboardPage_NavigatesToReportIE()
+        public void Selenium_VerifyTicketsPageIE()
         {
             this.driver = new InternetExplorerDriver();
-            Selenium_VerifyDashboardPage_NavigatesToReport();
+            Selenium_VerifyTicketsPage();
         }
 
         #endregion
@@ -190,13 +190,12 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             Assert.AreEqual(pageTitle, "Dashboard");
         }
 
-        private void Selenium_VerifyDashboardPage_NavigatesToReport()
+        private void Selenium_VerifyTicketsPage()
         {
             driver.Navigate().GoToUrl(baseURL);
-            driver.FindElement(By.CssSelector("ul.alerts li a span")).Click();
+            driver.FindElement(By.CssSelector("a[href*='/ServiceTickets']")).Click();
             String pageTitle = driver.FindElement(By.CssSelector("#content h1")).Text.Trim();
-            //Assert.AreEqual("Alerts", pageTitle,"Expected to be on Alerts page on click of Alerts, but ended up on " + pageTitle +" page.");
-            Assert.AreEqual("Dashboard", pageTitle);
+            Assert.AreEqual("Service Tickets", pageTitle);
         }
 
         private bool IsElementPresent(By by)
