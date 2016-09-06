@@ -4,6 +4,7 @@
 
     using FabrikamFiber.DAL.Data;
     using FabrikamFiber.Web.ViewModels;
+    using System.Configuration;
 
     /// <summary>
     /// teste
@@ -36,6 +37,8 @@
                 Alerts = this.alertRepository.All,
                 Tickets = this.serviceTickets.AllIncluding(serviceticket => serviceticket.Customer, serviceticket => serviceticket.CreatedBy, serviceticket => serviceticket.AssignedTo),
             };
+
+            ViewBag.Ambiente = ConfigurationManager.AppSettings["Ambiente"].ToString();
 
             return View(viewModel);
         }
