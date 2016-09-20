@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DisableFirewall.ps1" />
+    <None Include="FabrikamFiber.Web.PureSeleniumTests.dll.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
