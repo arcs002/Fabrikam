@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="__SITENAME__" />
+  <setParameter name="FabrikamFiber-Express" value="__FabrikamFiber-Express__" />
+  <setParameter name="Ambiente" value="__Ambiente__" />
+  <setParameter name="FabrikamFiber-Express-Web.config Connection String" value="__FabrikamFiber-Express__" />
+  <setParameter name="FabrikamFiber-DataWarehouse-Web.config Connection String" value="__FabrikamFiber-DataWarehouse__" />
+  <setParameter name="FabrikamFiber.DAL.Data.FabrikamFiberWebContext-Web.config Connection String" value="FabrikamFiber.DAL.Data.FabrikamFiberWebContext_ConnectionString" />
+</parameters>
