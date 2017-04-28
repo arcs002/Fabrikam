@@ -4,6 +4,7 @@
     using System.Web.Mvc;
     using FabrikamFiber.DAL.Data;
     using FabrikamFiber.Web.ViewModels;
+    using System.Configuration;
 
     public class ReportsController : Controller
     {
@@ -18,6 +19,8 @@
 
         public ActionResult Index()
         {
+            ViewBag.Ambiente = ConfigurationManager.AppSettings["Ambiente"].ToString();
+
             return View();
         }
 

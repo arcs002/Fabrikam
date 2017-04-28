@@ -4,6 +4,7 @@ namespace FabrikamFiber.Web.Controllers
 
     using DAL.Data;
     using DAL.Models;
+    using System.Configuration;
 
     public class CustomersController : Controller
     {
@@ -24,6 +25,8 @@ namespace FabrikamFiber.Web.Controllers
         /// <returns></returns>
         public ViewResult Index()
         {
+            ViewBag.Ambiente = ConfigurationManager.AppSettings["Ambiente"].ToString();
+
             return View(this.customerRepository.All);
         }
 

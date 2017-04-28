@@ -4,6 +4,7 @@ namespace FabrikamFiber.Web.Controllers
 
     using FabrikamFiber.DAL.Data;
     using FabrikamFiber.DAL.Models;
+    using System.Configuration;
 
     public class EmployeesController : Controller
     {
@@ -17,6 +18,8 @@ namespace FabrikamFiber.Web.Controllers
 
         public ViewResult Index()
         {
+            ViewBag.Ambiente = ConfigurationManager.AppSettings["Ambiente"].ToString();
+
             return View(this.employeeRepository.All);
         }
 

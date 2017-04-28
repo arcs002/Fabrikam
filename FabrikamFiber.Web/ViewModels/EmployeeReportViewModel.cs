@@ -10,7 +10,11 @@
 
         public string GetCustomerSummary(Customer customer)
         {
-            return string.Format("{0}, {1}", customer.FullName, customer.Address.City);
+            if (customer != null)
+                return string.Format("{0}, {1}", customer.FullName, customer.Address.City);
+            else
+                return string.Empty;
+            
         }
     }
 }

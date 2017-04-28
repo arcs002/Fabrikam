@@ -8,6 +8,7 @@ namespace FabrikamFiber.Web.Controllers
     using FabrikamFiber.DAL.Data;
     using FabrikamFiber.DAL.Models;
     using FabrikamFiber.Web.ViewModels;
+    using System.Configuration;
 
     public class ServiceTicketsController : Controller
     {
@@ -33,6 +34,8 @@ namespace FabrikamFiber.Web.Controllers
 
         public ViewResult Index()
         {
+            ViewBag.Ambiente = ConfigurationManager.AppSettings["Ambiente"].ToString();
+
             return View(this.serviceTicketRepository.AllIncluding(serviceticket => serviceticket.Customer, serviceticket => serviceticket.CreatedBy, serviceticket => serviceticket.AssignedTo));
         }
 
