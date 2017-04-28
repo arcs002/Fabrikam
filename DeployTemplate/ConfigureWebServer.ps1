@@ -27,6 +27,14 @@ Configuration Main
             DependsOn = "[WindowsFeature]WebServerRole"
         }
 
+        WindowsFeature WebAspNet
+        {
+            Name = "Web-Asp-Net"
+            Ensure = "Present"
+            Source = $Source
+            DependsOn = "[WindowsFeature]WebServerRole"
+        }
+
         WindowsFeature WebNetExt35
         {
             Name = "Web-Net-Ext"
