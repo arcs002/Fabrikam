@@ -164,6 +164,10 @@
     <PostDeploy Include="Script.PostDeployment1.sql" />
   </ItemGroup>
   <ItemGroup>
+    <SqlCmdVariable Include="OrderBy">
+      <DefaultValue>DESC</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
     <SqlCmdVariable Include="TableName">
       <DefaultValue>Customers</DefaultValue>
       <Value>$(SqlCmdVar__1)</Value>
