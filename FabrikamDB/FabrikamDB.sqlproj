@@ -113,6 +113,7 @@
     <Folder Include="Ignored On Import\" />
     <Folder Include="Ignored On Import\FabrikamFiber-Express_20151117_02-35-24\" />
     <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\View" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish\FabrikamDB.publish.xml">
@@ -159,6 +160,8 @@
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
     <Build Include="dbo\Stored Procedures\GetCustomers.sql" />
+    <Build Include="dbo\View\AllCustomers.sql" />
+    <Build Include="dbo\Stored Procedures\GetCustomerById.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment1.sql" />

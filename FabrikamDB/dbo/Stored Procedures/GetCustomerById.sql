@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetCustomers]
+﻿CREATE PROCEDURE [dbo].[GetCustomerById]
 AS
 	SELECT
 		[ID],
@@ -7,11 +7,8 @@ AS
 		[Address_Street],
 		[Address_City],
 		[Address_State],
-		[Address_Zip] 
+		[Address_Zip]  
 	FROM 
 		[$(TableName)]
 	ORDER BY 
 		[$(OrderBy)]
-
-	declare @teste varchar(max)
-	set @teste ='Testes [$(TableName)]'
