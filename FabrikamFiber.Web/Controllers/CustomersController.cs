@@ -9,50 +9,28 @@ namespace FabrikamFiber.Web.Controllers
     public class CustomersController : Controller
     {
         private readonly ICustomerRepository customerRepository;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="customerRepository"></param>
+        
         public CustomersController(ICustomerRepository customerRepository)
         {
             this.customerRepository = customerRepository;
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        
         public ViewResult Index()
         {
             ViewBag.Ambiente = ConfigurationManager.AppSettings["Ambiente"].ToString();
             return View(this.customerRepository.All);
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        
         public ViewResult Details(int id)
         {
             return View(this.customerRepository.Find(id));
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+        
         public ActionResult Create()
         {
             return View();
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="customer"></param>
-        /// <returns></returns>
+        
         [HttpPost]
         public ActionResult Create(Customer customer)
         {
