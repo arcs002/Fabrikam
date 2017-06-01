@@ -26,7 +26,6 @@ namespace FabrikamFiber.Web.Controllers
         public ViewResult Index()
         {
             ViewBag.Ambiente = ConfigurationManager.AppSettings["Ambiente"].ToString();
-
             return View(this.customerRepository.All);
         }
 
@@ -64,7 +63,6 @@ namespace FabrikamFiber.Web.Controllers
                 this.customerRepository.Save();
                 return RedirectToAction("Index");
             }
-            
             return this.View();
         }
 
@@ -87,7 +85,6 @@ namespace FabrikamFiber.Web.Controllers
                 this.customerRepository.Save();
                 return RedirectToAction("Index");
             }
-            
             return this.View();
         }
 
