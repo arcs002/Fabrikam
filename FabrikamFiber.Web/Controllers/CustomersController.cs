@@ -78,7 +78,6 @@ namespace FabrikamFiber.Web.Controllers
         {
             this.customerRepository.Delete(id);
             this.customerRepository.Save();
-
             return RedirectToAction("Index");
         }
     }
