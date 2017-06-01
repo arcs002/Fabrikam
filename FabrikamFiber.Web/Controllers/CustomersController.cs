@@ -11,7 +11,7 @@ namespace FabrikamFiber.Web.Controllers
         private readonly ICustomerRepository customerRepository;
 
         /// <summary>
-        /// 
+        /// Change 01
         /// </summary>
         /// <param name="customerRepository"></param>
         public CustomersController(ICustomerRepository customerRepository)
@@ -20,7 +20,7 @@ namespace FabrikamFiber.Web.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Change 02
         /// </summary>
         /// <returns></returns>
         public ViewResult Index()
