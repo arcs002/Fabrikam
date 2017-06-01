@@ -41,6 +41,7 @@ namespace FabrikamFiber.Web.Controllers
                 this.customerRepository.Save();
                 return RedirectToAction("Index");
             }
+
             return this.View();
         }
 
@@ -63,6 +64,7 @@ namespace FabrikamFiber.Web.Controllers
                 this.customerRepository.Save();
                 return RedirectToAction("Index");
             }
+
             return this.View();
         }
 
