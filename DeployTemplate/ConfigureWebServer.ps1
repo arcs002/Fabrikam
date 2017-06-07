@@ -62,12 +62,6 @@ Configuration Main
 		    Ensure = "Present"
             DependsOn = "[WindowsFeature]WebServerRole"
 	    }
-        
-        WindowsFeature WebMgmtTools { 
-				Ensure = "Present" 
-				Name = "Web-Mgmt-Tools"
-                DependsOn = "[WindowsFeature]WebServerRole"
-		}
 
         WindowsFeature WebISAPIExt
         {
