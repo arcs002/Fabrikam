@@ -12,6 +12,7 @@ namespace FabrikamFiber.Web.Controllers
         
         public CustomersController(ICustomerRepository customerRepository)
         {
+            //teste
             this.customerRepository = customerRepository;
         }
         
@@ -46,7 +47,7 @@ namespace FabrikamFiber.Web.Controllers
         }
 
         /// <summary>
-        /// outra alteração
+        /// outra alteraÃ§Ã£o
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
