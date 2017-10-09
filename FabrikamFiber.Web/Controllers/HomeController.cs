@@ -30,6 +30,7 @@
 
         public ActionResult Index()
         {
+            // Leandro Prado
             var viewModel = new DashboardViewModel
             {
                 ScheduleItems = this.scheduleItemRepository.All,
