@@ -10,10 +10,6 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
-USE [FabrikamFiber-Express]
-GO
-
-/*
 IF NOT EXISTS (SELECT name FROM sys.server_principals WHERE name = 'IIS APPPOOL\DefaultAppPool')
 BEGIN
     CREATE LOGIN [IIS APPPOOL\DefaultAppPool] 
@@ -158,4 +154,3 @@ INSERT [dbo].[ServiceLogEntries] ([ID], [CreatedAt], [Description], [CreatedByID
 GO
 SET IDENTITY_INSERT [dbo].[ServiceLogEntries] OFF
 GO
-*/
