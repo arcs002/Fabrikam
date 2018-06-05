@@ -17,15 +17,22 @@
         <Header Name="Referer" Value="{{URL}}/Customers/Create" />
       </Headers>
       <FormPostHttpBody>
-        <FormPostParameter Name="FirstName" Value="First" RecordedValue="First" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="LastName" Value="Last" RecordedValue="Last" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="Address.Street" Value="Street" RecordedValue="Street" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="Address.City" Value="City" RecordedValue="City" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="Address.State" Value="State" RecordedValue="State" CorrelationBinding="" UrlEncode="True" />
-        <FormPostParameter Name="Address.Zip" Value="12345" RecordedValue="12345" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="FirstName" Value="{{DataSource_CreateCustomer.CustomerValues#csv.FirstName}}" RecordedValue="First" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="LastName" Value="{{DataSource_CreateCustomer.CustomerValues#csv.LastName}}" RecordedValue="Last" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.Street" Value="{{DataSource_CreateCustomer.CustomerValues#csv.AddressStreet}}" RecordedValue="Street" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.City" Value="{{DataSource_CreateCustomer.CustomerValues#csv.AddressCity}}" RecordedValue="City" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.State" Value="{{DataSource_CreateCustomer.CustomerValues#csv.AddressState}}" RecordedValue="State" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.Zip" Value="{{DataSource_CreateCustomer.CustomerValues#csv.AddressZip}}" RecordedValue="12345" CorrelationBinding="" UrlEncode="True" />
       </FormPostHttpBody>
     </Request>
   </Items>
+  <DataSources>
+    <DataSource Name="DataSource_CreateCustomer" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\DataSource\CustomerValues.csv">
+      <Tables>
+        <DataSourceTable Name="CustomerValues#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
   <ContextParameters>
     <ContextParameter Name="URL" Value="http://vm06-webapp:8080" />
   </ContextParameters>

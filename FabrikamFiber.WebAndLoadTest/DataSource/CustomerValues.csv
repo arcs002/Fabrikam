@@ -1,4 +1,4 @@
-FirstName;LastName;AddressStreet;AddressCity;AddressState;AddressZip
-Leandro;Prado;Rua 12345;Sao Paulo;SP;12345
-João;Silva;Rua 67890;Curitiba;PR;67890
-Maria;Conceição;Rua 54321;Porto Alegre;RS;54321
+FirstName,LastName,AddressStreet,AddressCity,AddressState,AddressZip
+Leandro,Prado,Rua 12345,Sao Paulo,SP,12345
+Joao,Silva,Rua 67890,Curitiba,PR,67890
+Maria,Conceicao,Rua 54321,Porto Alegre,RS,54321
