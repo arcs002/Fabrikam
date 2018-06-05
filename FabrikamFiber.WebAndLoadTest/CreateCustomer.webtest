@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<WebTest Name="CreateCustomer" Id="0395befe-2662-4ab1-b449-693f65afbd96" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.c3b10718-7e1f-42c8-9a77-a1e9100bde7a.rec.webtestresult" ResultsLocale="">
+<WebTest Name="CreateCustomer" Id="0395befe-2662-4ab1-b449-693f65afbd96" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="CreateCustomer.90ad594e-256b-473b-aa88-100ab9040b5b.rec.webtestresult" ResultsLocale="">
   <Items>
-    <Request Method="GET" Guid="795f5dbd-d6ff-49ff-a130-a5df9cba8faa" Version="1.1" Url="http://vm06-webapp1:8080/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
-    <Request Method="GET" Guid="f39f882a-7371-4538-a5b5-a89f0928a3e6" Version="1.1" Url="http://vm06-webapp1:8080/Customers" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="8b8d4cc2-2276-4613-adcb-302bf7406b75" Version="1.1" Url="{{URL}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="1ad181c3-e163-44cc-820e-85a768d4a92f" Version="1.1" Url="{{URL}}/Customers" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="http://vm06-webapp1:8080/" />
+        <Header Name="Referer" Value="{{URL}}/" />
       </Headers>
     </Request>
-    <Request Method="GET" Guid="b99b7962-1795-4e0f-876e-d3ca0b767a87" Version="1.1" Url="http://vm06-webapp1:8080/Customers/Create" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="GET" Guid="a5c97245-0d83-4ca8-9e92-f7cac274f9c5" Version="1.1" Url="{{URL}}/Customers/Create" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="http://vm06-webapp1:8080/Customers" />
+        <Header Name="Referer" Value="{{URL}}/Customers" />
       </Headers>
     </Request>
-    <Request Method="POST" Guid="a57b2488-2917-4267-b07f-93e747764af2" Version="1.1" Url="http://vm06-webapp1:8080/Customers/Create" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://vm06-webapp1:8080/Customers" ReportingName="" IgnoreHttpStatusCode="False">
+    <Request Method="POST" Guid="79d53615-ca67-4896-a4de-c1b13d27902b" Version="1.1" Url="{{URL}}/Customers/Create" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{URL}}/Customers" ReportingName="" IgnoreHttpStatusCode="False">
       <Headers>
-        <Header Name="Referer" Value="http://vm06-webapp1:8080/Customers/Create" />
+        <Header Name="Referer" Value="{{URL}}/Customers/Create" />
       </Headers>
       <FormPostHttpBody>
         <FormPostParameter Name="FirstName" Value="First" RecordedValue="First" CorrelationBinding="" UrlEncode="True" />
@@ -26,6 +26,9 @@
       </FormPostHttpBody>
     </Request>
   </Items>
+  <ContextParameters>
+    <ContextParameter Name="URL" Value="http://vm06-webapp:8080" />
+  </ContextParameters>
   <ValidationRules>
     <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
     <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
