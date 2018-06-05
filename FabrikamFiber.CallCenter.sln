@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web", "FabrikamFiber.Web\FabrikamFiber.Web.csproj", "{456D6BF0-21B0-4995-9D77-76FA13AD95DA}"
 EndProject
@@ -37,10 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Definitions", "Serv
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B160C3A-0040-46E2-97B5-D707FFCD23E3}"
 	ProjectSection(SolutionItems) = preProject
-		DataCollector-Level2.testsettings = DataCollector-Level2.testsettings
 		RemoteController.testsettings = RemoteController.testsettings
 		TestSettings.testsettings = TestSettings.testsettings
-		WeatherWSDL Test Steps.txt = WeatherWSDL Test Steps.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web.PureSeleniumTests", "FabrikamFiber.Web.PureSeleniumTests\FabrikamFiber.Web.PureSeleniumTests.csproj", "{AF7F18E7-E7D0-4250-A6E2-8A2D900E22DD}"
@@ -95,5 +93,8 @@ Global
 		{AF7F18E7-E7D0-4250-A6E2-8A2D900E22DD} = {DF8AE614-8E4D-4BDA-9879-7331588005B1}
 		{2FE8E250-4218-4B31-AB23-D9B91ABD842B} = {DF8AE614-8E4D-4BDA-9879-7331588005B1}
 		{2D4A36D5-9E98-4C1E-A860-D4B65D948F9E} = {DF8AE614-8E4D-4BDA-9879-7331588005B1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {422B1FC3-AB5F-4C12-9803-1320C98E80B9}
 	EndGlobalSection
 EndGlobal
