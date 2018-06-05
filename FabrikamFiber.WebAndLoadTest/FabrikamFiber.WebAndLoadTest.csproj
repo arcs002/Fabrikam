@@ -56,6 +56,7 @@
     <None Include="CreateCustomer.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="DataSource\CustomerIds.csv" />
     <None Include="DataSource\CustomerValues.csv" />
     <None Include="LoadTestCustomer.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
