@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="CreateEmployee" Id="99be27c7-389e-4ec8-a741-04b7c0179f3e" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.ad8a1d5b-ba7b-48fd-a84d-a476e3a736b6.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="ab977d47-d3b9-4353-8281-856ec4db7208" Version="1.1" Url="{{URL}}/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="8c70a42d-3312-49c7-af36-af6cff2b385b" Version="1.1" Url="{{URL}}/Employees" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{URL}}/" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="5530f954-3cb8-4d40-9476-e51f328bbb3f" Version="1.1" Url="{{URL}}/Employees/Create" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{URL}}/Employees" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="3c60b020-77c6-44f6-897a-9bab07841eba" Version="1.1" Url="{{URL}}/Employees/Create" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="{{URL}}/Employees" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="{{URL}}/Employees/Create" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="FirstName" Value="{{DataSource_CreateEmployee.EmployeeValues#csv.FirstName}}" RecordedValue="First" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="LastName" Value="{{DataSource_CreateEmployee.EmployeeValues#csv.LastName}}" RecordedValue="Last" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.Street" Value="{{DataSource_CreateEmployee.EmployeeValues#csv.AddressStreet}}" RecordedValue="Street" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.City" Value="{{DataSource_CreateEmployee.EmployeeValues#csv.AddressCity}}" RecordedValue="City" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.State" Value="{{DataSource_CreateEmployee.EmployeeValues#csv.AddressState}}" RecordedValue="State" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Address.Zip" Value="{{DataSource_CreateEmployee.EmployeeValues#csv.AddressZip}}" RecordedValue="12345" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ServiceAreas" Value="{{DataSource_CreateEmployee.EmployeeValues#csv.ServiceAreas}}" RecordedValue="Service" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+  </Items>
+  <DataSources>
+    <DataSource Name="DataSource_CreateEmployee" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="|DataDirectory|\DataSource\EmployeeValues.csv">
+      <Tables>
+        <DataSourceTable Name="EmployeeValues#csv" SelectColumns="SelectOnlyBoundColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="URL" Value="http://vm06-webapp:8080" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

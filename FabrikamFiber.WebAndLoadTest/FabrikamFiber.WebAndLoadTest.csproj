@@ -58,10 +58,17 @@
     </None>
     <None Include="DataSource\CustomerIds.csv" />
     <None Include="DataSource\CustomerValues.csv" />
-    <None Include="LoadTestCustomer.loadtest">
+    <None Include="DataSource\EmployeeValues.csv" />
+    <None Include="FabrikamFiber - LoadTestCustomer.loadtest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="EditCustomer.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="EditEmployee.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="CreateEmployee.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
