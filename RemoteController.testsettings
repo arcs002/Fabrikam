@@ -10,7 +10,7 @@
           <TestDirectory useLoadContext="true" />
         </AssemblyResolution>
       </UnitTestRunConfig>
-      <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+      <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207" runUntilDataExhausted="true">
         <Browser name="Internet Explorer 11.0" MaxConnections="6">
           <Headers>
             <Header name="User-Agent" value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko" />
