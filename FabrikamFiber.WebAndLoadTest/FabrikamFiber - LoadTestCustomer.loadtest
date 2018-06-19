@@ -2,8 +2,8 @@
 <LoadTest Name="FabrikamFiber - LoadTestCustomer" Description="" Owner="" storage="c:\users\brian\source\repos\fabrikamfiber\fabrikamfiber.webandloadtest\fabrikamfiber - loadtestcustomer.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="48b4022c-d892-4754-88fb-ec2cd75b1799" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
     <Scenario Name="Scenario1 - Customer - Create and Edit" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
-      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
-      <LoadProfile Pattern="Step" InitialUsers="10" MaxUsers="200" StepUsers="10" StepDuration="10" StepRampTime="0" />
+      <ThinkProfile Value="0.2" Pattern="Off" />
+      <LoadProfile Pattern="Step" InitialUsers="1000" MaxUsers="200000" StepUsers="1000" StepDuration="10" StepRampTime="0" />
       <TestMix>
         <TestProfile Name="CreateCustomer" Path="createcustomer.webtest" Id="0395befe-2662-4ab1-b449-693f65afbd96" Percentage="30" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
         <TestProfile Name="EditCustomer" Path="editcustomer.webtest" Id="8b1fc909-de7d-4908-9d0d-5e0f8cee3421" Percentage="70" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -27,8 +27,8 @@
       </NetworkMix>
     </Scenario>
     <Scenario Name="Scenario2 - Employee - Create and Edit" DelayBetweenIterations="0" PercentNewUsers="0" IPSwitching="false" TestMixType="PercentageOfTestsStarted" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
-      <ThinkProfile Value="0.2" Pattern="NormalDistribution" />
-      <LoadProfile Pattern="Step" InitialUsers="10" MaxUsers="200" StepUsers="20" StepDuration="10" StepRampTime="0" />
+      <ThinkProfile Value="0.2" Pattern="Off" />
+      <LoadProfile Pattern="Step" InitialUsers="1000" MaxUsers="200000" StepUsers="1000" StepDuration="10" StepRampTime="0" />
       <TestMix>
         <TestProfile Name="CreateEmployee" Path="createemployee.webtest" Id="99be27c7-389e-4ec8-a741-04b7c0179f3e" Percentage="30" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
         <TestProfile Name="EditEmployee" Path="editemployee.webtest" Id="f79b9458-95af-4d40-aaf6-cc057aca54fa" Percentage="70" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />

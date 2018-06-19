@@ -32,9 +32,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         public void SetupTest()
         {
             //baseURL = this.TestContext.Properties["webAppUrl"].ToString();
-            //baseURL = "http://localhost/FabrikamFiber";
-            //baseURL = "http://dtcvdapp-01:9090";
-            baseURL = "http://vm06-webapp1:8080";
+            baseURL = "http://vm06-webapp:8080/";
 
             verificationErrors = new StringBuilder();
         }
@@ -60,6 +58,9 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestCategory("Firefox")]
         public void Selenium_CreateNewCustomerRecordFireFox()
         {
+            //instalar o driver geckodriver e adicionar no path da maquina
+            //https://github.com/mozilla/geckodriver/releases
+
             this.driver = new FirefoxDriver();
             Selenium_CreateNewCustomerRecord();
         }
@@ -151,7 +152,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         private void Selenium_CreateNewCustomerRecord()
         {
 
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+            //driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
             driver.Manage().Window.Maximize();
 
             driver.Navigate().GoToUrl(baseURL);
