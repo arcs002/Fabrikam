@@ -119,7 +119,6 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         [TestMethod]
         [Priority(0)]
-        [Ignore]
         [TestCategory("InternetExplorer")]
         public void Selenium_CreateNewCustomerRecordIE()
         {
@@ -129,7 +128,6 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         
         [TestMethod]
         [Priority(0)]
-        [Ignore]
         [TestCategory("InternetExplorer")]
         public void Selenium_VerifyDashboardPageIE()
         {
@@ -139,7 +137,6 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         [TestMethod]
         [Priority(0)]
-        [Ignore]
         [TestCategory("InternetExplorer")]
         public void Selenium_VerifyTicketsPageIE()
         {
