@@ -120,6 +120,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestMethod]
         [Priority(0)]
         [TestCategory("InternetExplorer")]
+        [Ignore]
         public void Selenium_CreateNewCustomerRecordIE()
         {
             this.driver = new InternetExplorerDriver();
