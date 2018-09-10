@@ -1,5 +1,4 @@
-﻿//using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
@@ -11,15 +10,15 @@ using Assert = NUnit.Framework.Assert;
 using TestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 using OpenQA.Selenium.Remote;
 
+
 namespace FabrikamFiber.Web.PureSeleniumTests
 {
     [TestClass]
     public class SeleniumTests
     {
-        //private IWebDriver driver;
         private RemoteWebDriver driver;
-        private StringBuilder verificationErrors;
-        private string baseURL;
+        private string baseURL = "http://vm06-webapp:8080";
+        private string browser = string.Empty;
         private bool acceptNextAlert = true;
 
         public TestContext TestContext
@@ -31,14 +30,39 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestInitialize]
         public void SetupTest()
         {
-            //baseURL = this.TestContext.Properties["webAppUrl"].ToString();
-            baseURL = "http://vm06-webapp:8080/";
+            // https://blogs.msdn.microsoft.com/devops/2016/01/27/getting-started-with-selenium-testing-in-a-continuous-integration-pipeline-with-visual-studio/
+            // https://almvm.azurewebsites.net/labs/vsts/selenium/
 
-            verificationErrors = new StringBuilder();
+            //Set the browswer from a build
+            browser = this.TestContext.Properties["browser"] != null ? this.TestContext.Properties["browser"].ToString() : "chrome";
+            switch (browser)
+            {
+                case "firefox":
+                    driver = new FirefoxDriver();
+                    break;
+                case "chrome":
+                    driver = new ChromeDriver();
+                    break;
+                case "ie":
+                    driver = new InternetExplorerDriver();
+                    break;
+                default:
+                    driver = new ChromeDriver();
+                    break;
+            }
+
+            if (this.TestContext.Properties["Url"] != null) //Set URL from a build
+            {
+                this.baseURL = this.TestContext.Properties["Url"].ToString();
+            }
+            else
+            {
+                this.baseURL = "http://vm06-webapp:8080/"; //default URL just to get started with
+            }
         }
 
         [TestCleanup]
-        public void TeardownTest()
+        public void CleanuoTest()
         {
             try
             {   
@@ -49,7 +73,6 @@ namespace FabrikamFiber.Web.PureSeleniumTests
             {
                 // Ignore errors if unable to close the browser
             }
-            Assert.AreEqual("", verificationErrors.ToString());
         }
 
         #region Firefox
