@@ -153,6 +153,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestMethod]
         [Priority(0)]
         [TestCategory("InternetExplorer")]
+        [Ignore]
         public void Selenium_VerifyDashboardPageIE()
         {
             this.driver = new InternetExplorerDriver();
@@ -162,6 +163,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         [TestMethod]
         [Priority(0)]
         [TestCategory("InternetExplorer")]
+        [Ignore]
         public void Selenium_VerifyTicketsPageIE()
         {
             this.driver = new InternetExplorerDriver();
