@@ -32,24 +32,25 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             // https://blogs.msdn.microsoft.com/devops/2016/01/27/getting-started-with-selenium-testing-in-a-continuous-integration-pipeline-with-visual-studio/
             // https://almvm.azurewebsites.net/labs/vsts/selenium/
+            // https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2017
 
             //Set the browswer from a build
-            browser = this.TestContext.Properties["browser"] != null ? this.TestContext.Properties["browser"].ToString() : "chrome";
-            switch (browser)
-            {
-                case "firefox":
-                    driver = new FirefoxDriver();
-                    break;
-                case "chrome":
-                    driver = new ChromeDriver();
-                    break;
-                case "ie":
-                    driver = new InternetExplorerDriver();
-                    break;
-                default:
-                    driver = new ChromeDriver();
-                    break;
-            }
+            //browser = this.TestContext.Properties["browser"] != null ? this.TestContext.Properties["browser"].ToString() : "chrome";
+            //switch (browser)
+            //{
+            //    case "firefox":
+            //        driver = new FirefoxDriver();
+            //        break;
+            //    case "chrome":
+            //        driver = new ChromeDriver();
+            //        break;
+            //    case "ie":
+            //        driver = new InternetExplorerDriver();
+            //        break;
+            //    default:
+            //        driver = new ChromeDriver();
+            //        break;
+            //}
 
             if (this.TestContext.Properties["Url"] != null) //Set URL from a build
             {
@@ -62,7 +63,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         }
 
         [TestCleanup]
-        public void CleanuoTest()
+        public void CleanupTest()
         {
             try
             {   
