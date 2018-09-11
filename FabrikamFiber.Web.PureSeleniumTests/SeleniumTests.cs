@@ -184,14 +184,17 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         public void TakeScreenshot(string fileName)
         {
-            ITakesScreenshot ssdriver = this.driver as ITakesScreenshot;
-            Screenshot screenshot = ssdriver.GetScreenshot();
+            if ((this.TestContext.CurrentTestOutcome == UnitTestOutcome.Error) || (this.TestContext.CurrentTestOutcome == UnitTestOutcome.Failed))
+            {
+                ITakesScreenshot ssdriver = this.driver as ITakesScreenshot;
+                Screenshot screenshot = ssdriver.GetScreenshot();
 
-            string path = Directory.GetCurrentDirectory() + "\\" + fileName + ".png";
+                string path = Directory.GetCurrentDirectory() + "\\" + fileName + ".png";
 
-            screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
+                screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
 
-            this.TestContext.AddResultFile(path);
+                this.TestContext.AddResultFile(path);
+            }
         }
 
         private void Selenium_CreateNewCustomerRecord()
@@ -233,7 +236,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             driver.Navigate().GoToUrl(baseURL);
             String pageTitle = driver.FindElement(By.CssSelector("#content h1")).Text.Trim();
-            Assert.AreEqual(pageTitle, "Dashboard");
+            Assert.AreEqual(pageTitle, "Dashboardd");
         }
 
         private void Selenium_VerifyTicketsPage()
