@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Assert = NUnit.Framework.Assert;
 using TestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
 using OpenQA.Selenium.Remote;
-
+using System.IO;
 
 namespace FabrikamFiber.Web.PureSeleniumTests
 {
@@ -87,6 +87,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
             this.driver = new FirefoxDriver();
             Selenium_CreateNewCustomerRecord();
+            TakeScreenshot(nameof(Selenium_CreateNewCustomerRecordFireFox));
         }
 
         [TestMethod]
@@ -96,6 +97,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new FirefoxDriver();
             Selenium_VerifyDashboardPage();
+            TakeScreenshot(nameof(Selenium_VerifyDashboardPageFireFox));
         }
 
         [TestMethod]
@@ -105,6 +107,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new FirefoxDriver();
             Selenium_VerifyTicketsPage();
+            TakeScreenshot(nameof(Selenium_VerifyTicketsPageFireFox));
         }
 
         #endregion
@@ -117,6 +120,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new ChromeDriver();
             Selenium_CreateNewCustomerRecord();
+            TakeScreenshot(nameof(Selenium_CreateNewCustomerRecordChrome));
         }
 
         [TestMethod]
@@ -126,6 +130,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new ChromeDriver();
             Selenium_VerifyDashboardPage();
+            TakeScreenshot(nameof(Selenium_VerifyDashboardPageChrome));
         }
 
         [TestMethod]
@@ -135,6 +140,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new ChromeDriver();
             Selenium_VerifyTicketsPage();
+            TakeScreenshot(nameof(Selenium_VerifyTicketsPageChrome));
         }
 
         #endregion
@@ -149,6 +155,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new InternetExplorerDriver();
             Selenium_CreateNewCustomerRecord();
+            TakeScreenshot(nameof(Selenium_CreateNewCustomerRecordIE));
         }
         
         [TestMethod]
@@ -159,6 +166,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new InternetExplorerDriver();
             Selenium_VerifyDashboardPage();
+            TakeScreenshot(nameof(Selenium_VerifyDashboardPageIE));
         }
 
         [TestMethod]
@@ -169,9 +177,22 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             this.driver = new InternetExplorerDriver();
             Selenium_VerifyTicketsPage();
+            TakeScreenshot(nameof(Selenium_VerifyTicketsPageIE));
         }
 
         #endregion
+
+        public void TakeScreenshot(string fileName)
+        {
+            ITakesScreenshot ssdriver = this.driver as ITakesScreenshot;
+            Screenshot screenshot = ssdriver.GetScreenshot();
+
+            string path = Directory.GetCurrentDirectory() + "\\" + fileName + ".png";
+
+            screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
+
+            this.TestContext.AddResultFile(path);
+        }
 
         private void Selenium_CreateNewCustomerRecord()
         {
@@ -207,7 +228,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
             driver.FindElement(By.CssSelector("input.glossyBox")).Click();
         }
-
+        
         private void Selenium_VerifyDashboardPage()
         {
             driver.Navigate().GoToUrl(baseURL);
