@@ -184,8 +184,8 @@ namespace FabrikamFiber.Web.PureSeleniumTests
 
         public void TakeScreenshot(string fileName)
         {
-            if ((this.TestContext.CurrentTestOutcome == UnitTestOutcome.Error) || (this.TestContext.CurrentTestOutcome == UnitTestOutcome.Failed))
-            {
+            //if ((this.TestContext.CurrentTestOutcome == UnitTestOutcome.Error) || (this.TestContext.CurrentTestOutcome == UnitTestOutcome.Failed))
+            //{
                 ITakesScreenshot ssdriver = this.driver as ITakesScreenshot;
                 Screenshot screenshot = ssdriver.GetScreenshot();
 
@@ -194,7 +194,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
                 screenshot.SaveAsFile(path, ScreenshotImageFormat.Png);
 
                 this.TestContext.AddResultFile(path);
-            }
+            //}
         }
 
         private void Selenium_CreateNewCustomerRecord()
