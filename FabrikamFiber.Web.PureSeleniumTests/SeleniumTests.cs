@@ -236,7 +236,7 @@ namespace FabrikamFiber.Web.PureSeleniumTests
         {
             driver.Navigate().GoToUrl(baseURL);
             String pageTitle = driver.FindElement(By.CssSelector("#content h1")).Text.Trim();
-            Assert.AreEqual(pageTitle, "Dashboardd");
+            Assert.AreEqual(pageTitle, "Dashboard");
         }
 
         private void Selenium_VerifyTicketsPage()
